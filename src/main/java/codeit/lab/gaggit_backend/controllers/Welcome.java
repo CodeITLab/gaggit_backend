@@ -1,12 +1,12 @@
 package codeit.lab.gaggit_backend.controllers;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class Welcome {
-    @RequestMapping("/welcome")
+    @RequestMapping(value = "/welcome")
     public String Welcome() {
         return "Welcome to Gaggit";
     }
