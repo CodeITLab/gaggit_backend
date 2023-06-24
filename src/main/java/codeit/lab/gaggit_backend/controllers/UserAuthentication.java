@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.*;
 public class UserAuthentication {
     @GetMapping(path = "/isUserLoggedIn")
     @ResponseBody
-    public ResponseEntity Welcome(@RequestBody User user) {
-        return new ResponseEntity(
-                new User(0, "Ivan", true),
+    public ResponseEntity<User> Welcome() {
+        return new ResponseEntity(new User(0, "Ivan", true),
                 HttpStatusCode.valueOf(200));
-
     }
 }
